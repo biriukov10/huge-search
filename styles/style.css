@@ -6,6 +6,7 @@ body {
 }
 
 .ba-wrapper {
+  width: 100%;
   padding-top: 50px;
 }
 .ba-form {
@@ -18,6 +19,7 @@ body {
   width: 100%;
   padding: 0 80px 0 10px;
   border: none;
+  cursor: pointer;
   background: transparent;
   font-size: 7em;
   color: #ec5a62;
@@ -39,12 +41,13 @@ input::placeholder {
   height: 80px;
   position: absolute;
   right: 0;
+  cursor: pointer;
   top: 50%;
   overflow: hidden;
   background: transparent url(../images/лупа.svg) no-repeat center center;
   border: none;
-  transform: translate3d(0,-30%,0) scale(1);
   transition: transform 0.3s;
+  transform: translate3d(0,-30%,0) scale(1);
   transform-origin: 100% 50%;
 }
 
@@ -75,13 +78,13 @@ input::placeholder {
   font-size: 1rem;
   padding: 0 0 6em;
 }
+.ba-list li {
+  width: 70%;
+}
 .ba-list {
   padding: 0;
   margin: 0;
 }
-/* .ba-main:nth-child(2) {
-  margin: 0 5%;
-} */
 .ba-list a {
   padding: 0.75em;
   display: block;
@@ -90,7 +93,9 @@ input::placeholder {
   background: rgba(118,117,128,0.05);
   color: rgba(145,145,145,0.7);
   border-radius: 5px;
+  transition: all ease .3s;
 }
+
 .ba-list a:hover {
   color: #EC5A62;
 }
@@ -107,10 +112,33 @@ input::placeholder {
 }
 .ba-list h3 {
   display: inline-block;
+  vertical-align: middle;
   font-size: 0.85em;
+  margin: 0 0 0 0; 
   color: inherit;
   width: calc(100% - 70px);
 }
+.ba-list a:hover {
+  font-size: 1.3em;
+}
 .ba-list a:hover,
 .ba-list a:focus {
-	background: rgba(118,117,128,0.1);
+  background: rgba(118,117,128,0.1);
+}
+
+@media screen and (max-width: 850px) {
+  .ba-inp {
+    padding: 0 40px 0 10px;
+    font-size: 2em;
+    transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1);
+  }
+  .ba-main {
+    width: 100%;
+    padding: 0 0 2em;
+  }
+  .ba-sbmit {
+    transform: translate3d(0,-50%,0) scale3d(0.5,0.5,1);
+  }
+}
+
+
