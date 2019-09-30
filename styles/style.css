@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: rgba(118,117,128,0.1);
   box-sizing: border-box;
@@ -40,7 +43,7 @@ input::placeholder {
   width: 80px;
   height: 80px;
   position: absolute;
-  right: 0;
+  right: 15%;
   cursor: pointer;
   top: 50%;
   overflow: hidden;
@@ -60,6 +63,8 @@ input::placeholder {
   text-decoration: none;
 }
 .content {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   margin-top: 50px;
   font-size: 0;
@@ -127,6 +132,9 @@ input::placeholder {
 }
 
 @media screen and (max-width: 850px) {
+  .content {
+    flex-direction: column;
+  }
   .ba-inp {
     padding: 0 40px 0 10px;
     font-size: 2em;
@@ -136,7 +144,10 @@ input::placeholder {
     width: 100%;
     padding: 0 0 2em;
   }
-  .ba-sbmit {
+  .ba-wrapper.ba-sumbit {
+    width: 30px;
+    height: 30px;
+    top: 0;
     transform: translate3d(0,-50%,0) scale3d(0.5,0.5,1);
   }
 }
