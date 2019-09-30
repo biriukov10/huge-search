@@ -84,7 +84,7 @@ input::placeholder {
   padding: 0 0 6em;
 }
 .ba-list li {
-  width: 70%;
+  width: 80%;
 }
 .ba-list {
   padding: 0;
@@ -131,7 +131,7 @@ input::placeholder {
   background: rgba(118,117,128,0.1);
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
   .content {
     flex-direction: column;
   }
